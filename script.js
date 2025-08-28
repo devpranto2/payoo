@@ -1,23 +1,20 @@
 // login button dunctionality
 
-document.getElementById("login-button").addEventListener("click",function(event){
-    event.preventDefault()
-    
-    const mobileNumber = 11876692921
-    const pinNumber = 1234
+document.getElementById("login-button").addEventListener('click',function(event){
+    event.preventDefault();
+    console.log("clicked")
 
-    const mobilenumberValue=document.getElementById("mobile-number").value;
-    const mobilenumberValueConverted=parseInt(mobilenumberValue)
+    const validNumber=11111111111;
+    const validPin=1234;
 
-    const pinNumberValue=document.getElementById("pin-number").value;
-    const pinNumberValueConverted=parseInt(pinNumberValue)
+    const MobileNumber=parseInt(document.getElementById("mobile-number").value)
 
-    // console.log(mobilenumberValueConverted,pinNumberValueConverted)
+    const pinNumber=parseInt(document.getElementById("pin-number").value)
 
-    if(mobilenumberValueConverted===mobileNumber && pinNumberValueConverted===pinNumber){
+
+    if(MobileNumber === validNumber && pinNumber === validPin){
         window.location.href="home.html"
     }else{
-        alert("Invalid number or pin")
+        alert("User informationis Invalalid")
     }
-
 })

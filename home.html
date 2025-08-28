@@ -11,7 +11,7 @@
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#f4f5f7] h-[100vh] ">
+<body class="bg-[#f4f5f7] ">
     <div class="bg-white max-w-lg m-auto">
             <div class=" min-h-[60px] flex justify-between items-center  border-b-[2px] border-[#c9b6b6] p-4 bg-white">
         <div class="flex gap-3 justify-center items-center">
@@ -30,38 +30,39 @@
         <h1 class="text-2xl font-bold ">🔥 Welcome to Payooo!</h1>
         <p class="text-gray-400">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
     </div>
-
+    <!-- card  -->
     <div class=" grid grid-cols-3 gap-4 p-4">
-        <div class="rounded-xl border-1  border-2 border-gray-300 p-4">
+        <div id="add-money-button" class="rounded-xl border-1  border-2 border-gray-300 p-4">
             <img class="mx-auto" src="assets/wallet1.png" alt="">
             <h1 class="text-center">Add Money</h1>
         </div>
-        <div class="rounded-xl border-2 border-gray-300 p-4">
+        <div id="cashout-button" class="rounded-xl border-2 border-gray-300 p-4">
             <img class="mx-auto" src="assets/send1.png" alt="">
             <h1 class="text-center">Cashout</h1>
         </div>
         <div class="rounded-xl border-2 border-gray-300 p-4">
             <img class="mx-auto" src="assets/money1.png" alt="">
-            <h1 class="text-center">Add Money</h1>
+            <h1 class="text-center">Transfer Money</h1>
         </div>
         <div class="rounded-xl border-2 border-gray-300 p-4">
             <img class="mx-auto" src="assets/bonus1.png" alt="">
-            <h1 class="text-center">Add Money</h1>
+            <h1 class="text-center">Get Bonus</h1>
         </div>
         <div class="rounded-xl border-2 border-gray-300 p-4">
             <img class="mx-auto" src="assets/purse1.png" alt="">
-            <h1 class="text-center">Add Money</h1>
+            <h1 class="text-center">Pay Bill</h1>
         </div>
         <div class="rounded-xl border-2 border-gray-300 p-4">
             <img class="mx-auto" src="assets/transaction1.png" alt="">
-            <h1 class="text-center">Add Money</h1>
+            <h1 class="text-center">Transactions</h1>
         </div>
     </div>
     </div>
 
-    <div class="all-form-section max-w-lg mx-auto ">
+    <div class="all-form-section max-w-lg mx-auto " >
        
-       <div class="">
+        <!-- add money section -->
+       <div id="add-money-parent" style="display: none;">
          <h1 class="p-7 font-semibold text-2xl">Add money</h1>
             <form action="" class="bg-white rounded-xl  p-7" >
                 <div>
@@ -90,6 +91,30 @@
 
             </form>
        </div>
+
+        <!-- cash out section -->
+       <div id="cashout-parent" style="display: none;">
+         <h1 class="p-7 font-semibold text-2xl">Cash Out</h1>
+            <form action="" class="bg-white rounded-xl  p-7" >
+                
+            <div>
+                <label for="" class="font-semibold text-gray-500">Agent Number</label><br>
+             <input  id="agent-number"  type="text" class="input bg-[#f4f5f7] rounded-[50px] my-3 w-full" placeholder="Enter 11 digit number" />
+            </div>
+            <div>
+                <label for="" class="font-semibold text-gray-500">Ammout </label><br>
+             <input id="withdraw-amount"  type="text" class="input bg-[#f4f5f7] rounded-[50px] my-3 w-full" placeholder="Enter amount to withdraw" />
+            </div>
+            <div>
+                <label  class="font-semibold text-gray-500">Pin Number</label><br>
+             <input id="withdraw-pin" type="text" class="input bg-[#f4f5f7] rounded-[50px] my-3 w-full" placeholder="Enter 4 digit pin number" />
+            </div>
+
+            <button id="withdraw-btn" class="btn  bg-[#0974f2] text-white w-full rounded-2xl mt-8">Withdraw Money</button>
+
+            </form>
+       </div>
+
     </div>
 
     <script src="home.js"></script>
